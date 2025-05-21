@@ -1,0 +1,65 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="informe01" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b455a0ac-9ea6-4299-8b34-74889fed776d">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="IlBST0RVQ1RPUyIgLDE1LDE1LGI1MTFiOThhLWM0MGQtNGQwYS04ODdkLTQ2ZjgyYWQxZDY2Yjs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="HSQL"/>
+	<query language="SQL"><![CDATA[SELECT *
+FROM "PRODUCTOS"
+ORDER BY nombre]]></query>
+	<field name="NOMBRE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOMBRE"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOMBRE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="PRODUCTOS"/>
+	</field>
+	<field name="PRECIOUNI" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="PRECIOUNI"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRECIOUNI"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="PRODUCTOS"/>
+	</field>
+	<field name="UNIDEXIST" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="UNIDEXIST"/>
+		<property name="com.jaspersoft.studio.field.label" value="UNIDEXIST"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="PRODUCTOS"/>
+	</field>
+	<field name="UNIDAVISO" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="UNIDAVISO"/>
+		<property name="com.jaspersoft.studio.field.label" value="UNIDAVISO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="PRODUCTOS"/>
+	</field>
+	<field name="SUSPENDIDO" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="SUSPENDIDO"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUSPENDIDO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="PRODUCTOS"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="33" splitType="Stretch">
+		<element kind="staticText" uuid="c99ffbef-a0ad-43f6-834a-0a3161496886" x="0" y="0" width="280" height="30" fontSize="22.0">
+			<text><![CDATA[Productos Tiernos Galván]]></text>
+		</element>
+	</title>
+	<pageHeader height="28" splitType="Stretch">
+		<element kind="textField" uuid="baeaa948-a599-441c-b911-9a7daf231ae1" x="440" y="0" width="120" height="20" fontSize="14.0" pattern="MMMMM dd, yyyy" vTextAlign="Middle">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageHeader>
+	<columnHeader height="25" splitType="Stretch">
+		<element kind="staticText" uuid="b7e7d13a-e674-4c68-a64f-c7ddc233dea1" x="0" y="0" width="210" height="20" fontSize="15.0">
+			<text><![CDATA[NOMBRE DEL PRODUCTO]]></text>
+		</element>
+		<element kind="staticText" uuid="d3b0a7b7-3f4e-443c-b97f-2aa2162adaa2" x="220" y="0" width="80" height="20" fontSize="15.0">
+			<text><![CDATA[PRECIO]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<element kind="textField" uuid="d6a00a72-e249-4a33-89bd-1e2b4b67d476" x="0" y="0" width="210" height="20" fontName="Algerian" linkType="None" linkTarget="Self" vTextAlign="Middle">
+				<expression><![CDATA[$F{NOMBRE}]]></expression>
+			</element>
+			<element kind="textField" uuid="47267e21-5560-4413-bf8d-86c497d223df" x="220" y="0" width="80" height="20" fontName="Algerian" linkType="None" linkTarget="Self" vTextAlign="Middle">
+				<expression><![CDATA[$F{PRECIOUNI}]]></expression>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
